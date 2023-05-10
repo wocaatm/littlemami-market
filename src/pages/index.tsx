@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Index() {
   return (
-    <div className="fixed top-1/2 left-0 right-0 -translate-y-1/2 flex justify-center items-center">
+    <div className="flex-wrap fixed top-1/2 left-0 right-0 -translate-y-1/2 flex justify-center items-center lg:flex-nowrap">
       <div className="relative w-[300px] h-[200px]">
         <div className="absolute top-0 w-[300px] h-[197px] z-20">
           <Image
@@ -30,7 +30,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className='ml-12 font-bold text-7xl text-white text-center tracking-tighter'>
+      <div className='mt-20 lg:ml-12 lg:mt-0 font-bold text-4xl lg:text-7xl text-white text-center tracking-tighter'>
         <p>Little Mami Ecosystem</p>
         <p className='mt-8'>NFT Market</p>
       </div>
