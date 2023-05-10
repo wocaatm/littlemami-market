@@ -350,7 +350,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const contract = await sdk.getContract(NFT_COLLECTION_ADDRESS);
 
-  const nfts = await contract.erc721.getAll();
+  let nfts = await contract.erc721.getAll();
+
+  nfts = nfts.filter((nft) => nft.metadata.id != '0')
 
   const paths = nfts.map((nft) => {
     return {
